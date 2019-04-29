@@ -154,8 +154,8 @@ body {
   font-size: 14px;
 }
 
-header {
-  display: inline-block;
+.header {
+  display: flex;
 }
 
 a {
@@ -226,6 +226,9 @@ p {
   width: 93%;
   margin-top: 10%;
 }
+.contact    {
+    margin-top: 20px;
+}
 
 #copyright {
   text-align: center;
@@ -240,24 +243,17 @@ p {
         flex-direction: column-reverse;
         width: 100%;
     }
-    /* .header :nth-child(1) {
-        order: 2;
-    }
-
-    .header :nth-child(2)  {
-        order: 1;
-    } */
 
     
     .head   {
         width: 100%;
         justify-content: center;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
     .logo   {
         width: 25%;
         justify-content: center;
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
 
     }
     .title-pic img  {
@@ -268,5 +264,71 @@ p {
         display: inline-block;
         text-align: center;
         width: 100%
+    }
+}
+
+/* Begin CSS for 500px width */
+
+@media(max-width: 500px)    {
+    body    {
+        margin: 0;
+    }
+    .header {
+        /* flex-wrap: wrap; */
+        flex-wrap: nowrap;
+        /* border: 2px dashed cyan; */
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }   
+
+    .logo   {
+        margin-top: 2%;
+        margin-bottom: 0;
+        /* border: 1px solid red; */
+        width: 30%;
+        height: 20%;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* border: 1px solid blue; */
+        
+    }
+    nav a {
+        width: 100%;
+        margin: 0;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        /* border-left: 1px solid grey; */
+        padding-top: 3%;
+        padding-bottom: 3%;
+        text-align: center;
+        font-size: 14px;
+        
+    }
+
+    .feature-about  {
+        display: block;
+        margin: 2%;
+        /* border: 1px solid red; */
+    }
+
+    .top-mid    {
+        width: 90%;
+    }
+
+    .bottom-text    {
+        display: block;
+        margin: 2%;
+    }
+
+    .bottom-mid {
+        width: 90%;
+    }
+
+    .contact    {
+        margin: 2%;
     }
 }
